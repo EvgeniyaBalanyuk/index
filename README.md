@@ -10,7 +10,7 @@ SELECT table_schema, CONCAT(ROUND((SUM(index_length)) * 100 / (SUM(data_length +
 FROM information_schema.TABLES where TABLE_SCHEMA = 'sakila';
 ```
 
-
+![](https://github.com/EvgeniyaBalanyuk/index/blob/main/index.png)
 
 ---
 
