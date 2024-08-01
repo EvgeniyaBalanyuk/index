@@ -52,6 +52,9 @@ GROUP BY c.customer_id;
                 -> Index range scan on p using pay_date over ('2005-07-30 00:00:00' <= payment_date < '2005-07-31 00:00:00'), with index condition: ((p.payment_date >= TIMESTAMP'2005-07-30 00:00:00') and (p.payment_date < <cache>(('2005-07-30' + interval 1 day))))  (cost=286 rows=634) (actual time=0.0169..0.982 rows=634 loops=1)
                 -> Single-row index lookup on c using PRIMARY (customer_id=p.customer_id)  (cost=0.25 rows=1) (actual time=0.00126..0.0013 rows=1 loops=634)
 
+
 ```
+
+![](https://github.com/EvgeniyaBalanyuk/index/blob/main/index_2.png)
 
 ---
